@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 · Página no encontrada</title>
+<meta name="description" content="Error 404: la página que buscas no existe o se mudó. Vuelve al inicio y sigue explorando.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd9ec">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171226">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404 · Página no encontrada">
+<meta property="og:description" content="¡Ups! Esta página se perdió en el camino.">
+<meta property="og:locale" content="es_ES">
+<style>
+:root{
+  --bg1:#ffd9ec; --bg2:#e3dcff; --bg3:#d2f1ff;
+  --glow:rgba(255,255,255,.55);
+  --ink:#4b3b63; --ink-soft:#8a7aa8;
+  --pink:#ff7bac; --purple:#a78bfa; --sun:#ffc94d; --mint:#6fe3c1;
+  --card:rgba(255,255,255,.62); --card-border:rgba(255,255,255,.75);
+  --bubble:#ffffff; --bubble-ink:#4b3b63;
+  --shape-op:.55;
+  --shadow:0 24px 70px rgba(167,139,250,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg1:#171226; --bg2:#241a45; --bg3:#101a2e;
+    --glow:rgba(255,255,255,.06);
+    --ink:#f4effe; --ink-soft:#c3b8e6;
+    --card:rgba(255,255,255,.06); --card-border:rgba(255,255,255,.14);
+    --bubble:#2e2454; --bubble-ink:#f4effe;
+    --shape-op:.3;
+    --shadow:0 24px 70px rgba(0,0,0,.55);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  min-height:100svh;
+  display:grid;place-items:center;
+  padding:1.5rem;
+  font-family:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",Meiryo,"Comic Sans MS","Chalkboard SE","Segoe UI",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1100px 560px at 12% 8%, var(--glow), transparent 60%),
+    radial-gradient(900px 520px at 88% 90%, var(--glow), transparent 60%),
+    linear-gradient(135deg,var(--bg1),var(--bg2) 55%,var(--bg3));
+  background-attachment:fixed;
+  overflow-x:hidden;
+}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.bg span{position:absolute;bottom:-12vh;opacity:var(--shape-op);animation:rise linear infinite;will-change:transform}
+@keyframes rise{to{transform:translateY(-125vh) rotate(320deg)}}
+.card{
+  position:relative;z-index:1;
+  width:min(92vw,620px);
+  text-align:center;
+  background:var(--card);
+  border:2px solid var(--card-border);
+  border-radius:36px;
+  padding:clamp(1.4rem,4.5vw,2.8rem);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.jp{font-size:.82rem;letter-spacing:.55em;text-indent:.55em;color:var(--ink-soft);font-weight:700}
+.cat-wrap{position:relative;display:inline-block;margin-top:.4rem}
+.bubble{
+  position:absolute;left:50%;top:-12px;transform:translate(-50%,-100%);
+  max-width:78vw;
+  background:var(--bubble);color:var(--bubble-ink);
+  font-size:.92rem;font-weight:700;text-align:center;
+  padding:.5rem 1.05rem;border-radius:999px;
+  box-shadow:0 8px 22px rgba(75,59,99,.18);
+}
+.bubble::after{
+  content:"";position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);
+  border:8px solid transparent;border-top-color:var(--bubble);border-bottom:0;
+}
+.cat{
+  display:inline-block;margin-top:2rem;
+  background:none;border:0;cursor:pointer;padding:.4rem;border-radius:50%;
+  transition:transform .18s ease;
+}
+.cat:hover{transform:scale(1.06)}
+.cat:focus-visible{outline:3px solid var(--purple);outline-offset:4px}
+.cat svg{
+  display:block;width:clamp(150px,32vw,205px);height:auto;
+  filter:drop-shadow(0 14px 18px rgba(75,59,99,.22));
+  animation:floaty 3.2s ease-in-out infinite;
+}
+.cat.pop{animation:boing .5s ease}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes boing{0%{transform:scale(1)}30%{transform:scale(1.14) rotate(-3deg)}60%{transform:scale(.94) rotate(2deg)}100%{transform:scale(1)}}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 4.6s infinite}
+@keyframes blink{0%,91%,100%{transform:scaleY(1)}94%{transform:scaleY(.08)}97%{transform:scaleY(1)}}
+.tail{transform-box:view-box;transform-origin:158px 176px;animation:wag 2.1s ease-in-out infinite}
+@keyframes wag{0%,100%{transform:rotate(0)}50%{transform:rotate(-16deg)}}
+.arm{transform-box:view-box;transform-origin:76px 150px;animation:wave 2.7s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(0)}25%{transform:rotate(-20deg)}55%{transform:rotate(8deg)}}
+h1{
+  font-size:clamp(4.2rem,17vw,8.2rem);
+  line-height:.95;font-weight:800;letter-spacing:.02em;
+  margin:.35rem 0 .6rem;user-select:none;
+}
+h1 span{display:inline-block;animation:bounce 2.3s ease-in-out infinite;text-shadow:0 8px 0 rgba(75,59,99,.10)}
+h1 span:nth-child(1){color:var(--pink);--r:-4deg;animation-delay:0s}
+h1 span:nth-child(2){color:var(--purple);--r:0deg;animation-delay:.18s}
+h1 span:nth-child(3){color:var(--sun);--r:4deg;animation-delay:.36s}
+@keyframes bounce{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(var(--r,0deg))}}
+.lead{font-size:clamp(1.05rem,2.6vw,1.3rem);font-weight:700}
+.sub{margin-top:.45rem;color:var(--ink-soft);font-size:clamp(.92rem,2.2vw,1.02rem)}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.5rem}
+.btn{
+  font:inherit;font-weight:800;font-size:1rem;
+  padding:.85rem 1.7rem;border-radius:999px;cursor:pointer;text-decoration:none;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+}
+.btn:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+.btn-primary{color:#fff;background:linear-gradient(135deg,var(--pink),var(--purple));box-shadow:0 10px 24px rgba(255,123,172,.45)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(255,123,172,.55)}
+.btn-ghost{color:var(--ink);background:transparent;border:2px solid var(--ink-soft)}
+.btn-ghost:hover{transform:translateY(-3px);background:var(--card)}
+.heart{position:fixed;z-index:5;pointer-events:none;font-size:1.3rem;animation:popfly 1s ease-out forwards}
+@keyframes popfly{
+  from{opacity:1;transform:translate(0,0) scale(.5) rotate(0)}
+  to{opacity:0;transform:translate(var(--dx),-130px) scale(1.25) rotate(var(--rr))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<div class="bg" id="bg" aria-hidden="true"></div>
+<main class="card" data-depth="6">
+  <p class="jp" aria-hidden="true">エラー · 404</p>
+  <div class="cat-wrap" data-depth="14">
+    <p class="bubble" id="bubble">¡Miau! (˘ω˘ )</p>
+    <button class="cat" id="cat" type="button" aria-label="Gatito kawaii: toca para que hable">
+      <svg viewBox="0 0 220 210" aria-hidden="true" focusable="false">
+        <path class="tail" d="M158 176 C 194 180, 202 148, 188 134" fill="none" stroke="#ffe4c4" stroke-width="17" stroke-linecap="round"/>
+        <circle cx="188" cy="134" r="9" fill="#ffb3c8"/>
+        <ellipse cx="110" cy="170" rx="50" ry="36" fill="#ffe4c4"/>
+        <ellipse cx="110" cy="179" rx="27" ry="20" fill="#fff7ef"/>
+        <g class="arm">
+          <ellipse cx="56" cy="140" rx="11" ry="21" fill="#ffe4c4" transform="rotate(-32 56 140)"/>
+          <circle cx="48" cy="124" r="9" fill="#fff7ef"/>
+        </g>
+        <ellipse cx="88" cy="197" rx="14" ry="9" fill="#fff7ef"/>
+        <ellipse cx="132" cy="197" rx="14" ry="9" fill="#fff7ef"/>
+        <path d="M64 62 L50 14 L98 44 Z" fill="#ffe4c4"/>
+        <path d="M156 62 L170 14 L122 44 Z" fill="#ffe4c4"/>
+        <path d="M66 54 L59 26 L88 44 Z" fill="#ffb3c8"/>
+        <path d="M154 54 L161 26 L132 44 Z" fill="#ffb3c8"/>
+        <ellipse cx="110" cy="92" rx="58" ry="50" fill="#ffe4c4"/>
+        <path d="M152 36 l3.2 7.6 7.6 3.2 -7.6 3.2 -3.2 7.6 -3.2 -7.6 -7.6 -3.2 7.6 -3.2 Z" fill="#ffc94d"/>
+        <g class="eye">
+          <ellipse cx="88" cy="90" rx="7.5" ry="10" fill="#4b3b63"/>
+          <circle cx="90.5" cy="86" r="2.6" fill="#fff"/>
+        </g>
+        <g class="eye">
+          <ellipse cx="132" cy="90" rx="7.5" ry="10" fill="#4b3b63"/>
+          <circle cx="134.5" cy="86" r="2.6" fill="#fff"/>
+        </g>
+        <ellipse cx="70" cy="108" rx="10" ry="6" fill="#ffb3c8" opacity=".85"/>
+        <ellipse cx="150" cy="108" rx="10" ry="6" fill="#ffb3c8" opacity=".85"/>
+        <path d="M106 101 h8 l-4 6 z" fill="#ff8fab"/>
+        <path d="M110 107 q-3 7 -10 5 M110 107 q3 7 10 5" fill="none" stroke="#4b3b63" stroke-width="2.5" stroke-linecap="round"/>
+        <g stroke="#e8c39e" stroke-width="2.2" stroke-linecap="round">
+          <path d="M52 96 L30 90"/>
+          <path d="M52 106 L30 110"/>
+          <path d="M168 96 L190 90"/>
+          <path d="M168 106 L190 110"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+  <h1 aria-label="404"><span aria-hidden="true">4</span><span aria-hidden="true">0</span><span aria-hidden="true">4</span></h1>
+  <p class="lead">¡Ups! Esta página se perdió en el camino…</p>
+  <p class="sub">El gatito la buscó por todas partes, pero no aparece. ¿Volvemos juntos al inicio?</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="/">🏠 Volver al inicio</a>
+    <button class="btn btn-ghost" id="back" type="button">↩︎ Volver atrás</button>
+  </div>
+</main>
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var glyphs = ["✦","♥","♡","⭐","☁","✧","🐾"];
+  var colors = ["#ff7bac","#a78bfa","#ffc94d","#6fe3c1","#7cc7ff"];
+  var bg = document.getElementById("bg");
+  for (var i=0;i<16;i++){
+    var s = document.createElement("span");
+    s.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+    s.style.left = (Math.random()*100) + "vw";
+    s.style.fontSize = (0.9 + Math.random()*1.6) + "rem";
+    s.style.color = colors[Math.floor(Math.random()*colors.length)];
+    s.style.animationDuration = (9 + Math.random()*10) + "s";
+    s.style.animationDelay = (-Math.random()*18) + "s";
+    bg.appendChild(s);
+  }
+
+  if(!reduce){
+    var layers = document.querySelectorAll("[data-depth]");
+    var tx=0, ty=0, raf=null;
+    window.addEventListener("pointermove", function(e){
+      tx = (e.clientX / window.innerWidth - .5) * 2;
+      ty = (e.clientY / window.innerHeight - .5) * 2;
+      if(!raf){
+        raf = requestAnimationFrame(function(){
+          layers.forEach(function(el){
+            var d = parseFloat(el.getAttribute("data-depth")) || 0;
+            el.style.translate = (tx*d) + "px " + (ty*d) + "px";
+          });
+          raf = null;
+        });
+      }
+    }, {passive:true});
+  }
+
+  var phrases = [
+    "¡Miau! (˘ω˘ )",
+    "404: página no encontrada 🐾",
+    "¡Nya~! ¿Buscabas algo?",
+    "Aquí no hay nada… ¡pero gracias por pasar! 💖",
+    "El gatito te acompaña 🐱",
+    "¡Ups! Se perdió esta página ✨",
+    "¿Quieres volver al inicio? 🏠"
+  ];
+  var bubble = document.getElementById("bubble");
+  var cat = document.getElementById("cat");
+  var last = 0;
+  var hearts = ["💗","💖","✨","🐾","⭐"];
+  cat.addEventListener("click", function(){
+    var n;
+    do { n = Math.floor(Math.random()*phrases.length); } while(phrases.length>1 && n===last);
+    last = n;
+    bubble.textContent = phrases[n];
+    cat.classList.remove("pop");
+    void cat.offsetWidth;
+    cat.classList.add("pop");
+    if(reduce) return;
+    var r = cat.getBoundingClientRect();
+    var cx = r.left + r.width/2, cy = r.top + r.height/3;
+    for(var j=0;j<7;j++){
+      var h = document.createElement("span");
+      h.className = "heart";
+      h.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+      h.style.left = cx + "px";
+      h.style.top = cy + "px";
+      h.style.setProperty("--dx", (Math.random()*160-80) + "px");
+      h.style.setProperty("--rr", (Math.random()*120-60) + "deg");
+      h.addEventListener("animationend", function(){ this.remove(); });
+      document.body.appendChild(h);
+    }
+  });
+
+  document.getElementById("back").addEventListener("click", function(){
+    if(window.history.length > 1){ window.history.back(); }
+    else { window.location.href = "/"; }
+  });
+})();
+</script>
+</body>
+</html>
